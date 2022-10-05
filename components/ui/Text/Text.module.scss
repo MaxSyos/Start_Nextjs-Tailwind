@@ -4,7 +4,7 @@
   }
 
   &:is(h1, h2) {
-    @apply font-heading font-bold;
+    @apply font-semibold font-bold;
   }
 }
 

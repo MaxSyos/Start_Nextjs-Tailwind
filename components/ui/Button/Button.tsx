@@ -9,6 +9,8 @@ import Link from 'next/link';
 import cn from 'classnames';
 
 import s from './Button.module.scss';
+import { mergeRefs } from '../../../utils/index';
+
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
@@ -18,7 +20,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   target?: '_blank' | '_self' | '_parent' | '_top';
   size?: 'sm' | 'md' | 'lg';
   type?: 'button' | 'submit' | 'reset';
-  variant?: 'primary' | 'secondary' | 'naked';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'naked';
   as?: 'button' | 'a' | JSXElementConstructor<any>;
 }
 
@@ -41,6 +43,7 @@ export const Button: FC<ButtonProps> = forwardRef((props, buttonRef) => {
     {
       [s.primary]: variant === 'primary',
       [s.secondary]: variant === 'secondary',
+      [s.tertiary]: variant === 'tertiary',
       [s.naked]: variant === 'naked',
       [s.sm]: size === 'sm',
       [s.md]: size === 'md',
@@ -53,7 +56,7 @@ export const Button: FC<ButtonProps> = forwardRef((props, buttonRef) => {
   return (
     <>
       {href ? (
-        <Tag {...rest}>
+        <Tag ref={mergeRefs([ref, buttonRef])} {...rest}>
           <Link href={href}>
             <a className={classes} target={target}>
               {children}
@@ -61,7 +64,12 @@ export const Button: FC<ButtonProps> = forwardRef((props, buttonRef) => {
           </Link>
         </Tag>
       ) : (
-        <Tag disabled={disabled} className={classes} {...rest}>
+        <Tag
+          ref={mergeRefs([ref, buttonRef])}
+          disabled={disabled}
+          className={classes}
+          {...rest}
+        >
           {children}
         </Tag>
       )}

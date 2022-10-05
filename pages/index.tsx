@@ -1,14 +1,15 @@
 import {  Page } from '@components/common';
-import { Box, Text, } from '@components/ui';
+import { Box, Button, Container, Input, Image, Grid, Text, } from '@components/ui';
+
 
 export default function Home() {
   return (
     <Page
-    title='Home'
+    title='Teste'
     description=''
     >
-      Welcome to the next TS Starter
-      
+
+
     </Page>
   );
 }

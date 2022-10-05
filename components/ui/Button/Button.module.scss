@@ -7,6 +7,10 @@
 }
 
 .secondary {
+  @apply bg-green-600 text-white ring-green-600 ring-offset-2 hover:bg-lime-600 hover:ring dark:ring-offset-slate-900 2xl:ring-offset-4;
+}
+
+.tertiary {
   @apply bg-slate-800 text-white ring-slate-800 ring-offset-2 hover:bg-slate-900 hover:ring dark:bg-slate-700 dark:ring-slate-700 dark:ring-offset-slate-900 2xl:ring-offset-4;
 }
 
