@@ -8,6 +8,7 @@ interface Props extends LinkProps {
   className?: string;
   onClick?: () => void;
   target?: '_blank' | '_self' | '_parent' | '_top';
+  children?: React.ReactNode;
 }
 
 export const Link: FC<Props> = ({
