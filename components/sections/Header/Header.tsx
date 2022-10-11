@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { lighten } from 'polished';
+import { border, lighten } from 'polished';
 import { motion, AnimatePresence } from 'framer-motion';
 import cn from 'classnames';
+import s from '@styles/theme.module.scss'
 import { Box, Container, Link } from '@components/ui';
 import { MenuButton } from './Button Humburger';
 import { MenuHumburger } from './Menu Humburger';
@@ -44,7 +45,7 @@ export const Header = () => {
       {
         'hover:text-3xl hover:text-green-400 transition duration-300 ease-linear hover:translate-y-2' : pathname !== path,
       },
-      'font-heading md:ml-2 max-w-xs px-3 text-2xl   '
+      'font-heading md:ml-2 max-w-xs px-4 text-2xl   '
        
     );
   };
@@ -54,8 +55,8 @@ export const Header = () => {
   const onClose = () => setIsMenuOpen(false);
 
   return (
-    <Container className='flex  h-16 items-center justify-between  border-b-4 border-b-rose-600'>
-      <ul className='  sm:hidden flex h-full items-center justify-center gap-1'>
+  <Container className={`flex h-16 items-center justify-between  border-b-4 border-b-rose-600`}>
+      <ul className='sm:hidden md:hidden flex h-full items-center justify-center gap-1'>
         {links.map(({ label, href }, idx) => (
           <Link
             href={href}

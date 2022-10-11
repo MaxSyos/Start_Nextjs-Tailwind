@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
+      'lsm': {'min': '0px', 'max': '400px'},
+      // => @media (min-width: 640px and max-width: 767px) { ... }
       'sm': {'min': '0px', 'max': '630px'},
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
