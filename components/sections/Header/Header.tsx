@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { border, lighten } from 'polished';
 import { motion, AnimatePresence } from 'framer-motion';
 import cn from 'classnames';
 import s from '@styles/theme.module.scss'

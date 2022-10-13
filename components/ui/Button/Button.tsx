@@ -20,7 +20,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   target?: '_blank' | '_self' | '_parent' | '_top';
   size?: 'sm' | 'md' | 'lg';
   type?: 'button' | 'submit' | 'reset';
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'naked';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'naked';
   as?: 'button' | 'a' | JSXElementConstructor<any>;
 }
 
@@ -44,6 +44,7 @@ export const Button: FC<ButtonProps> = forwardRef((props, buttonRef) => {
       [s.primary]: variant === 'primary',
       [s.secondary]: variant === 'secondary',
       [s.tertiary]: variant === 'tertiary',
+      [s.quaternary]: variant === 'quaternary',
       [s.naked]: variant === 'naked',
       [s.sm]: size === 'sm',
       [s.md]: size === 'md',

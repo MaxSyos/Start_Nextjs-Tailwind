@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Box, Container, Text, Link } from '@components/ui'
+import { Box, Container, Text, Link, Grid } from '@components/ui'
 import React from 'react'
 import cn from 'classnames';
 import s from '@styles/theme.module.scss'
@@ -56,7 +56,7 @@ const Sidebar = () => {
       };
 
     return (
-        <Box  className={` w-3/12 h-full shadow-2xl bg-white bg-opacity-40 backdrop-blur-md rounded drop-shadow-lg`} >
+        <Container  className={`sm:2/12 w-3/12 h-full shadow-2xl bg-white bg-opacity-40 backdrop-blur-md rounded drop-shadow-lg`} >
             <Container className=" border-b py-3 mt-1 flex justify-around ">
                 <p className=" text-xl  font-semibold"></p>
                 <p>|</p>
@@ -109,7 +109,7 @@ const Sidebar = () => {
                 </div>
             </div>
 
-        </Box>
+        </Container>
     )
 }
 
