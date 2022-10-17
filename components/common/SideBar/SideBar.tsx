@@ -3,7 +3,7 @@ import { Box, Container, Text, Link, Grid } from '@components/ui'
 import React from 'react'
 import cn from 'classnames';
 import s from '@styles/theme.module.scss'
-import sideBar from './sideBar'
+
 import {
     AiFillLinkedin,
     AiFillGithub,
@@ -20,7 +20,7 @@ const Sidebar = () => {
           Icon: AiFillLinkedin,
         },
         {
-          label: 'Transaction',
+          label: 'Authorizations',
           href: '/#blog',
           Icon: AiFillGithub,
         },
@@ -56,9 +56,10 @@ const Sidebar = () => {
       };
 
     return (
-        <Container  className={`sm:2/12 w-3/12 h-full shadow-2xl bg-white bg-opacity-40 backdrop-blur-md rounded drop-shadow-lg`} >
+        <Container  className={`sm:top-0 sm:left-0 sm:z-30 sm:h-full sm:w-[81px] sm:border-r sm:border-slate-300 sm:pb-5 sm:pt-3
+            w-3/12 h-full shadow-2xl bg-white bg-opacity-40 backdrop-blur-md rounded drop-shadow-lg`} >
             <Container className=" border-b py-3 mt-1 flex justify-around ">
-                <p className=" text-xl  font-semibold"></p>
+                <p className=" text-xl font-semibold">   </p>
                 <p>|</p>
                 <p className="text-gray-400 text-lg">wallet</p>
             </Container>
@@ -76,8 +77,7 @@ const Sidebar = () => {
                             <Container as={'div'} className='sm:hidden md:hidden'>
                                 {label}
                             </Container >
-                            <Icon className={`h-7  w-12 transform text-slate-900 transition duration-300 ease-in-out hover:scale-125 hover:text-green-500 `} />
-
+                            <Icon className={`h-7 lg:hidden w-12 transform text-slate-900 transition duration-300 ease-in-out hover:scale-125 hover:text-green-500 `} />
                         </Link>
                         
                     ))}

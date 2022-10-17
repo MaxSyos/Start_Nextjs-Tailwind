@@ -25,7 +25,8 @@ export const Login = () => {
                     <Text as="h1" fontSize="3xl" className="font-bold text-center text-2xl mb-5">{'<Your Logo/>'}</Text>  
                     <Container className="bg-white bg-opacity-40 backdrop-blur-md drop-shadow-lg shadow  rounded-lg divide-y divide-gray-200">
                         <Container className="p-5 py-10 ">                    
-                            <Input  
+                            <Input 
+                                className="w-full" 
                                 placeholder='you@example.com'
                                 name='email'
                                 type='email'
@@ -33,6 +34,7 @@ export const Login = () => {
                                 required
                             />
                             <Input
+                                className="w-full"
                                 placeholder='........'
                                 type='password'
                                 name='Password'
