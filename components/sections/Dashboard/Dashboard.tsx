@@ -90,22 +90,20 @@ export default function Dashboard() {
                   </div>
                 </Grid>
                 {rows.map((row) => (
-                  <Grid className="w-full table-row-group hover:text-blue-400" >
-                    <td className="table-cell px-28 p-4">{row.label} </td>
-                    <td className="table-cell px-4 p-4">{row.create}</td>
-                    <td className="table-cell px-4 p-4">{row.read}</td>
-                    <td className="table-cell px-4 p-4">{row.update}</td>
-                    <td className="table-cell px-4 p-4">{row.delete}</td>
-                    <td className="table-cell px-4 p-4">
+                  <Grid className="w-full table-row-group  hover:text-blue-400" >
+                    <Box className="table-cell px-28 p-4 "> {row.label}</Box>
+                    <Box className="table-cell p-6"><Input type='checkbox' /></Box>
+                    <Box className="table-cell p-6"><Input type='checkbox' /></Box>
+                    <Box className="table-cell p-6"><Input type='checkbox' /></Box>
+                    <Box className="table-cell p-6"><Input type='checkbox' /></Box>
+                    <Box className="table-cell p-6">
                       <span className='rounded-xl p-2'style={makeStyle(row.status)}>{row.status}</span>
-                    </td>
+                    </Box>
                   </Grid>
                  ))}
               </Container>
             </Box>
           </Box>
         </Box>
- 		       
-
     )
 }
