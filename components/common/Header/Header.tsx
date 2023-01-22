@@ -16,18 +16,24 @@ export const Header = () => {
     {
       label: 'Home',
       href: '/',
+      item: [ 'item1', 'item2', 'item3' ],
     },
     {
       label: 'Blog',
       href: '/blog',
+      item: [ 'item2', 'item3' ],
+
     },
     {
       label: 'About',
       href: '/#about',
+      item: 'item1',
     },
     {
       label: 'Subscribe',
       href: '/#subscribe',
+      item: [ 'item1', 'item2' ],
+
     },
     {
       label: 'My Resume',
@@ -56,13 +62,18 @@ export const Header = () => {
   return (
   <Container className={`flex h-16 items-center justify-between  border-b-4 border-b-rose-600`}>
       <ul className='sm:hidden md:hidden flex h-full items-center justify-center gap-1'>
-        {links.map(({ label, href }, idx) => (
+        {links.map(({ label, href, item }, idx) => (
           <Link
             href={href}
             target={href.startsWith('http') ? '_blank' : '_self'}
             className={getClasses(href) }
           >
             {label}
+          <ul className="flex flex-col">
+            <li>
+              <a href="/#" className="font-semibold flex-col">{item}</a>
+            </li>
+          </ul>
           </Link>
         ))}
         

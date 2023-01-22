@@ -5,7 +5,8 @@ import { Box, Button, Container, Input, Image, Grid, Text, } from '@components/u
 import cn from 'classnames';
 import s from '@styles/theme.module.scss'
 import { Login } from '@components/common/Login/Login';
-import Dashboard from '@components/sections/Dashboard/Dashboard';
+import Dashboard from '@components/ui/sections/Dashboard/Dashboard';
+import { Dropdown } from '@components/common/Header/Dropdown';
 
 
 
@@ -17,7 +18,9 @@ export default function Home() {
     title='Teste'
     description=''
     >
-      <Box className='bg-blue-700 flex' ><Sidebar/><Dashboard/> </Box>
+      <Box className='bg-rose-700 flex' >
+
+      </Box>
       
       
     
